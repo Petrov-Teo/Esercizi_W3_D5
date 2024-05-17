@@ -47,37 +47,82 @@ console.log(me);
 /* ESERCIZIO E
   Crea del codice per aggiungere programmaticamente all'oggetto precedentemente creato un array chiamato "skills", contenente i linguaggi di programmazione che conosci.
 */
+console.log("ESERCIZIO E");
 
 me.skills = ["html", "css", "javaScript-base"];
+
 console.log(me);
+
 /* ESERCIZIO F
   Crea un pezzo di codice per aggiungere un nuovo elemento all'array "skills" contenuto nell'oggetto "me".
 */
+console.log("ESERCIZIO F");
+
+me.skills.push("nuovo");
+
+console.log(me);
 
 /* ESERCIZIO G
   Crea un pezzo di codice per rimuovere programmaticamente l'ultimo elemento dall'array "skills" contenuto nell'oggetto "me".
 */
+console.log("ESERCIZIO G");
+
+me.skills.pop("nuovo");
+console.log(me);
 
 // Funzioni
 
 /* ESERCIZIO 1
   Crea una funzione chiamata "dice": deve generare un numero casuale tra 1 e 6.
 */
+console.log("ESERCIZIO 1");
+
+const dice = function name() {
+  const numeroEstratto = Math.floor(Math.random() * 6 + 1);
+  return numeroEstratto;
+};
+const numeroRisultato = dice();
+
+console.log(numeroRisultato);
 
 /* ESERCIZIO 2
   Crea una funzione chiamata "whoIsBigger" che riceve due numeri come parametri e ritorna il maggiore dei due.
 */
+console.log("ESERCIZIO 2");
+
+const numeroUno = 60;
+const numeroDue = 39;
+
+const whoIsBigger = function (num1, num2) {
+  if (num1 > num2) {
+    return console.log(num1);
+  } else num2 > num1;
+  return console.log(num2);
+};
+whoIsBigger(numeroDue, numeroUno);
 
 /* ESERCIZIO 3
   Crea una funzione chiamata "splitMe" che riceve una stringa come parametro e ritorna un'array contenente ogni parola della stringa.
 
   Es.: splitMe("I love coding") => ritorna ["I", "Love", "Coding"]
 */
+console.log("ESERCIZIO 3");
+
+const splitMeText = "I love coding";
+console.log(splitMeText);
+
+const splitMe = function (stringa) {
+  const testo = stringa.split(" ");
+  return testo;
+};
+
+console.log(splitMe(splitMeText));
 
 /* ESERCIZIO 4
   Crea una funzione chiamata "deleteOne" che riceve una stringa e un booleano come parametri.
   Se il valore booleano è true la funzione deve ritornare la stringa senza il primo carattere, altrimenti la deve ritornare senza l'ultimo.
 */
+console.log("ESERCIZIO 4");
 
 /* ESERCIZIO 5
   Crea una funzione chiamata "onlyLetters" che riceve una stringa come parametro e la ritorna eliminando tutte le cifre numeriche.
