@@ -163,21 +163,22 @@ console.log(isThisAnEmail(latuamail));
 */
 console.log("ESERCIZIO 7");
 
-const giorniDellaSettimana = [
-  "Lunedì",
-  "Martedì",
-  "Mercoledì",
-  "Giovedì",
-  "Venerdì",
-  "Sabato",
-  "Domenica",
-];
 const whatDayIsIt = function (data) {
-  console.log(giorniDellaSettimana);
+  const giorniDellaSettimana = [
+    "Domenica",
+    "Lunedì",
+    "Martedì",
+    "Mercoledì",
+    "Giovedì",
+    "Venerdì",
+    "Sabato",
+  ];
   const oggi = new Date();
-  const dayIndex = today.getDay();
+  const dayIndex = oggi.getDay();
   return giorniDellaSettimana[dayIndex];
 };
+
+console.log(whatDayIsIt());
 
 /* ESERCIZIO 8
   Scrivi una funzione chiamata "rollTheDices" che riceve un numero come parametro.
@@ -185,12 +186,25 @@ const whatDayIsIt = function (data) {
   il suo valore deve rappresentare il totale di tutti i valori estratti con le invocazioni di dice().
   L'oggetto ritornato deve anche contenere una proprietà "values", contenente un array con tutti i valori estratti dalle invocazioni di dice().
 
+
   Example:
   rollTheDices(3) => ritorna {
       sum: 10
       values: [3, 3, 4]
   }
 */
+const rollTheDices = function (numero) {
+  dice();
+  const risultato = { sum: 0, values: [] };
+
+  for (let index = 0; index < numero; index++) {
+    const element = dice();
+    risultato.values.push(element);
+    risultato.sum += element;
+  }
+  return risultato;
+};
+console.log(rollTheDices(3));
 
 /* ESERCIZIO 9
   Scrivi una funzione chiamata "howManyDays" che riceve una data come parametro e ritorna il numero di giorni trascorsi da tale data.
@@ -199,6 +213,22 @@ const whatDayIsIt = function (data) {
 /* ESERCIZIO 10
   Scrivi una funzione chiamata "isTodayMyBirthday" che deve ritornare true se oggi è il tuo compleanno, falso negli altri casi.
 */
+const dataCopmleanno = 07 / 09 / 1986;
+
+const isTodayMyBirthday = (giorno) => {
+  const oggi = new Date();
+  const [giorno, mese, anno] = dataCopmleanno.split("/");
+
+  const giornoOggi = oggi.getDate();
+  const meseOggi = oggi.getMonth() + 1;
+
+  if (oggi === dataCopmleanno) {
+    return console.log("Auguri");
+  } else {
+    return console.log("oggi non è il tuo compleanno");
+  }
+};
+console.log(isTodayMyBirthday());
 
 // Arrays & Oggetti
 
