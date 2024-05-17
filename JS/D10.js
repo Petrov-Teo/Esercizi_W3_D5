@@ -193,6 +193,8 @@ console.log(whatDayIsIt());
       values: [3, 3, 4]
   }
 */
+console.log("ESERCIZIO 9");
+
 const rollTheDices = function (numero) {
   dice();
   const risultato = { sum: 0, values: [] };
@@ -213,22 +215,22 @@ console.log(rollTheDices(3));
 /* ESERCIZIO 10
   Scrivi una funzione chiamata "isTodayMyBirthday" che deve ritornare true se oggi è il tuo compleanno, falso negli altri casi.
 */
-const dataCopmleanno = 07 / 09 / 1986;
+// const dataCopmleanno = 07 / 09 / 1986;
 
-const isTodayMyBirthday = (giorno) => {
-  const oggi = new Date();
-  const [giorno, mese, anno] = dataCopmleanno.split("/");
+// const isTodayMyBirthday = (giorno) => {
+//   const oggi = new Date();
+//   const [giorno, mese, anno] = dataCopmleanno.split("/");
 
-  const giornoOggi = oggi.getDate();
-  const meseOggi = oggi.getMonth() + 1;
+//   const giornoOggi = oggi.getDate();
+//   const meseOggi = oggi.getMonth() + 1;
 
-  if (oggi === dataCopmleanno) {
-    return console.log("Auguri");
-  } else {
-    return console.log("oggi non è il tuo compleanno");
-  }
-};
-console.log(isTodayMyBirthday());
+//   if (oggi === dataCopmleanno) {
+//     return console.log("Auguri");
+//   } else {
+//     return console.log("oggi non è il tuo compleanno");
+//   }
+// };
+// console.log(isTodayMyBirthday());
 
 // Arrays & Oggetti
 
@@ -239,9 +241,18 @@ console.log(isTodayMyBirthday());
   in esso la proprietà chiamata come la stringa passata come secondo parametro.
 */
 
+// const deleteProp = function (oggetto,stringa ) {
+//   const
+// }
+
 /* ESERCIZIO 12
   Scrivi una funzione chiamata "newestMovie" che trova il film più recente nell'array "movies" fornito.
 */
+
+const newestMovie = function (film) {
+  movies[index].Year.sort();
+  console.log(movies.Year[i]);
+};
 
 /* ESERCIZIO 13
   Scrivi una funzione chiamata countMovies che ritorna il numero di film contenuti nell'array "movies" fornito.
